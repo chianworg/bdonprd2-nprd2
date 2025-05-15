@@ -1,10 +1,13 @@
 ---
-name: 03 Deploy Azure Landing Zones Continuous Delivery
+name: 02 Azure Landing Zones Continuous Delivery
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       terraform_action:
-        description: 'Terraform Action to perform'
+        description: 'Terraform Plan Action to perform'
         required: true
         default: 'apply'
         type: choice
@@ -18,9 +21,9 @@ on:
         type: string
 
 jobs:
-  apply_or_destroy:
-    uses: chianworg/bdonprd2-nprd2-templates/.github/workflows/cd-template-deploy.yaml@main
-    name: 'CD deploy'
+  plan_and_apply:
+    uses: chianworg/bdonprd2-nprd2-templates/.github/workflows/cd-template.yaml@main
+    name: 'CD'
     permissions:
       id-token: write
       contents: read
