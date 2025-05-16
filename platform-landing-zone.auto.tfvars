@@ -216,6 +216,9 @@ management_group_settings = {
             enableAscForCosmosDbs                       = "Disabled"
             enableAscForCspm                            = "Disabled"
           }
+        },
+        Deploy-AzActivity-Log = {
+          effect = "Disabled"
         }
       }
     }
