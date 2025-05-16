@@ -293,6 +293,22 @@ management_group_settings = {
       }
     }
 
+    sandbox = {
+      policy_assignments = {
+        Enforce-ALZ-Sandbox = {
+          enforcement_mode = "DoNotEnforce"
+        }
+      }
+    }
+
+    decommissioned = {
+      policy_assignments = {
+        Enforce-ALZ-Decomm = {
+          enforcement_mode = "DoNotEnforce"
+        }
+      }
+    }
+
     /*
     # Example of how to update a policy assignment enforcement mode for Private Link DNS Zones
     corp = {
