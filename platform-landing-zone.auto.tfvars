@@ -41,10 +41,10 @@ custom_replacements = {
     # connectivity_hub_secondary_resource_group_name = "rgbdo6-hub2-$${starter_location_02}"    
     # dns_resource_group_name                      = "rgbdo6-hub-dns-$${starter_location_01}"
     # ddos_resource_group_name                     = "rgbdo6-hub-ddos-$${starter_location_01}"
-    asc_export_resource_group_name               = "rgbdo6-asc-export-$${starter_location_01}"
+    asc_export_resource_group_name = "rgbdo6-asc-export-$${starter_location_01}"
 
     # Resource names
-    log_analytics_workspace_name            = "bdo6law-management-$${starter_location_01}"
+    log_analytics_workspace_name = "bdo6law-management-$${starter_location_01}"
     # ddos_protection_plan_name               = "bdo6ddos-$${starter_location_01}"
     # automation_account_name                 = "bdo6aa-management-$${starter_location_01}"
     ama_user_assigned_managed_identity_name = "bdo6uami-management-ama-$${starter_location_01}"
@@ -80,8 +80,8 @@ custom_replacements = {
 
     # IP Ranges Primary
     # Regional Address Space: 10.0.0.0/16
-    primary_hub_address_space                          = "10.0.0.0/22"
-    primary_side_car_virtual_network_address_space     = "10.0.4.0/22"
+    primary_hub_address_space                      = "10.0.0.0/22"
+    primary_side_car_virtual_network_address_space = "10.0.4.0/22"
     # primary_bastion_subnet_address_prefix              = "10.0.4.0/26"
     # primary_private_dns_resolver_subnet_address_prefix = "10.0.4.64/28"
 
@@ -101,7 +101,7 @@ custom_replacements = {
   NOTE: You cannot refer to another custom resource group identifier in this variable.
   */
   resource_group_identifiers = {
-    management_resource_group_id           = "/subscriptions/$${subscription_id_management}/resourcegroups/$${management_resource_group_name}"
+    management_resource_group_id = "/subscriptions/$${subscription_id_management}/resourcegroups/$${management_resource_group_name}"
     # ddos_protection_plan_resource_group_id = "/subscriptions/$${subscription_id_connectivity}/resourcegroups/$${ddos_resource_group_name}"
   }
 
@@ -219,6 +219,14 @@ management_group_settings = {
         },
         Deploy-AzActivity-Log = {
           effect = "Disabled"
+        },
+        Deploy-MDEndpoints = {
+          parameters = {
+            microsoftDefenderForEndpointWindowsVmAgentDeployEffect  = "AuditIfNotExists"
+            microsoftDefenderForEndpointLinuxVmAgentDeployEffect    = "AuditIfNotExists"
+            microsoftDefenderForEndpointWindowsArcAgentDeployEffect = "AuditIfNotExists"
+            microsoftDefenderForEndpointLinuxArcAgentDeployEffect   = "AuditIfNotExists"
+          }
         }
       }
     }
@@ -307,7 +315,7 @@ virtual_wan_settings = {
 virtual_wan_virtual_hubs = {
   primary = {
     hub = {
-      name = "$${primary_hub_name}"
+      name           = "$${primary_hub_name}"
       resource_group = "$${connectivity_hub_primary_resource_group_name}"
       location       = "$${starter_location_01}"
       address_prefix = "$${primary_hub_address_space}"
