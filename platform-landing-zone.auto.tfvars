@@ -188,11 +188,11 @@ management_group_settings = {
     */
     connectivity = {
       subscription_id       = "$${subscription_id_connectivity}"
-      management_group_name = "connectivity"
+      management_group_name = "mg-platform-connectivity-npd"
     }
     management = {
       subscription_id       = "$${subscription_id_management}"
-      management_group_name = "management"
+      management_group_name = "mg-platform-management-npd"
     }
   }
   policy_assignments_to_modify = {
