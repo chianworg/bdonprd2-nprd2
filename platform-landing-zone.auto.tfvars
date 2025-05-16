@@ -230,6 +230,56 @@ management_group_settings = {
         },
         Deploy-MDEndpointsAMA = {
           enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-MDFC-OssDb = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-MDFC-SqlAtp = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-ACSB = {
+          enforcement_mode = "DoNotEnforce"
+        }
+      }
+    }
+
+    mg-platform-npd = {
+      policy_assignments = {
+        DenyAction-DeleteUAMIAMA = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-MDFC-DefSQL-AMA = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmArc-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmHybr-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-AUM-CheckUpdates = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-ASR = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-GR-KeyVault = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Subnet-Private = {
+          enforcement_mode = "DoNotEnforce"
         }
       }
     }
