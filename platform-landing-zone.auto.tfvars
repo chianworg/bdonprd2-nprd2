@@ -36,8 +36,8 @@ custom_replacements = {
 
     # Resource group names
     management_resource_group_name               = "rgbdo6-management-$${starter_location_01}"
-    # connectivity_hub_vwan_resource_group_name    = "rgbdo6-hub-vwan-$${starter_location_01}"
-    # connectivity_hub_primary_resource_group_name = "rgbdo6-hub1-$${starter_location_01}"
+    connectivity_hub_vwan_resource_group_name    = "rgbdo6-hub-vwan-$${starter_location_01}"
+    connectivity_hub_primary_resource_group_name = "rgbdo6-hub1-$${starter_location_01}"
     # connectivity_hub_secondary_resource_group_name = "rgbdo6-hub2-$${starter_location_02}"    
     # dns_resource_group_name                      = "rgbdo6-hub-dns-$${starter_location_01}"
     # ddos_resource_group_name                     = "rgbdo6-hub-ddos-$${starter_location_01}"
@@ -53,11 +53,11 @@ custom_replacements = {
     dcr_vm_insights_name                    = "bdo6dcr-vm-insights"
 
     # Resource names primary connectivity
-    # primary_hub_name                                   = "bdo6vwan-hub1-$${starter_location_01}"
-    # primary_sidecar_virtual_network_name               = "bdo6vnet-sidecar1-$${starter_location_01}"
-    # primary_firewall_name                              = "bdo6fw-hub1-$${starter_location_01}"
-    # primary_firewall_policy_name                       = "bdo6fwp-hub1-$${starter_location_01}"
-    # primary_virtual_network_gateway_express_route_name = "bdo6vgw-hub1-er-$${starter_location_01}"
+    primary_hub_name                                   = "bdo6vwan-hub1-$${starter_location_01}"
+    primary_sidecar_virtual_network_name               = "bdo6vnet-sidecar1-$${starter_location_01}"
+    primary_firewall_name                              = "bdo6fw-hub1-$${starter_location_01}"
+    primary_firewall_policy_name                       = "bdo6fwp-hub1-$${starter_location_01}"
+    primary_virtual_network_gateway_express_route_name = "bdo6vgw-hub1-er-$${starter_location_01}"
     # primary_virtual_network_gateway_vpn_name           = "bdo6vgw-hub1-vpn-$${starter_location_01}"
     # primary_private_dns_resolver_name                  = "bdo6pdr-hub1-dns-$${starter_location_01}"
     # primary_bastion_host_name                          = "bdo6bas-hub-$${starter_location_01}"
@@ -80,8 +80,8 @@ custom_replacements = {
 
     # IP Ranges Primary
     # Regional Address Space: 10.0.0.0/16
-    # primary_hub_address_space                          = "10.0.0.0/22"
-    # primary_side_car_virtual_network_address_space     = "10.0.4.0/22"
+    primary_hub_address_space                          = "10.0.0.0/22"
+    primary_side_car_virtual_network_address_space     = "10.0.4.0/22"
     # primary_bastion_subnet_address_prefix              = "10.0.4.0/26"
     # primary_private_dns_resolver_subnet_address_prefix = "10.0.4.64/28"
 
@@ -256,15 +256,15 @@ management_group_settings = {
 --- Connectivity - Virtual WAN ---
 You can use this section to customize the virtual wan networking that will be deployed.
 */
-connectivity_type = "none"
+connectivity_type = "virtual_wan"
 
-/*
+
 connectivity_resource_groups = {
 
-  ddos = {
-    name     = "$${ddos_resource_group_name}"
-    location = "$${starter_location_01}"
-  }
+  # ddos = {
+  #   name     = "$${ddos_resource_group_name}"
+  #   location = "$${starter_location_01}"
+  # }
 
   vwan = {
     name     = "$${connectivity_hub_vwan_resource_group_name}"
@@ -274,33 +274,33 @@ connectivity_resource_groups = {
     name     = "$${connectivity_hub_primary_resource_group_name}"
     location = "$${starter_location_01}"
   }
-  vwan_hub_secondary = {
-    name     = "$${connectivity_hub_secondary_resource_group_name}"
-    location = "$${starter_location_02}"
-  }  
-  dns = {
-    name     = "$${dns_resource_group_name}"
-    location = "$${starter_location_01}"
-  }
+  # vwan_hub_secondary = {
+  #   name     = "$${connectivity_hub_secondary_resource_group_name}"
+  #   location = "$${starter_location_02}"
+  # }  
+  # dns = {
+  #   name     = "$${dns_resource_group_name}"
+  #   location = "$${starter_location_01}"
+  # }
 }
-*/
 
-/*
+
+
 virtual_wan_settings = {
   name                = "vwan-$${starter_location_01}"
   resource_group_name = "$${connectivity_hub_vwan_resource_group_name}"
   location            = "$${starter_location_01}"
 
-  ddos_protection_plan = {
-    name                = "$${ddos_protection_plan_name}"
-    resource_group_name = "$${ddos_resource_group_name}"
-    location            = "$${starter_location_01}"
-  }
+  # ddos_protection_plan = {
+  #   name                = "$${ddos_protection_plan_name}"
+  #   resource_group_name = "$${ddos_resource_group_name}"
+  #   location            = "$${starter_location_01}"
+  # }
 
 }
-*/
 
-/*
+
+
 virtual_wan_virtual_hubs = {
   primary = {
     hub = {
@@ -322,90 +322,89 @@ virtual_wan_virtual_hubs = {
       express_route = {
         name = "$${primary_virtual_network_gateway_express_route_name}"
       }
-      vpn = {
-        name = "$${primary_virtual_network_gateway_vpn_name}"
-      }
+      # vpn = {
+      #   name = "$${primary_virtual_network_gateway_vpn_name}"
+      # }
     }
-    private_dns_zones = {
-      resource_group_name            = "$${dns_resource_group_name}"
-      is_primary                     = true
-      auto_registration_zone_enabled = true
-      auto_registration_zone_name    = "$${primary_auto_registration_zone_name}"
-      subnet_address_prefix          = "$${primary_private_dns_resolver_subnet_address_prefix}"
-      private_dns_resolver = {
-        name = "$${primary_private_dns_resolver_name}"
-      }
-    }
+    # private_dns_zones = {
+    #   resource_group_name            = "$${dns_resource_group_name}"
+    #   is_primary                     = true
+    #   auto_registration_zone_enabled = true
+    #   auto_registration_zone_name    = "$${primary_auto_registration_zone_name}"
+    #   subnet_address_prefix          = "$${primary_private_dns_resolver_subnet_address_prefix}"
+    #   private_dns_resolver = {
+    #     name = "$${primary_private_dns_resolver_name}"
+    #   }
+    # }
 
-    bastion = {
-      subnet_address_prefix = "$${primary_bastion_subnet_address_prefix}"
-      bastion_host = {
-        name = "$${primary_bastion_host_name}"
-      }
-      bastion_public_ip = {
-        name  = "$${primary_bastion_host_public_ip_name}"
-        zones = "$${starter_location_01_availability_zones}"
-      }
-    }
+    # bastion = {
+    #   subnet_address_prefix = "$${primary_bastion_subnet_address_prefix}"
+    #   bastion_host = {
+    #     name = "$${primary_bastion_host_name}"
+    #   }
+    #   bastion_public_ip = {
+    #     name  = "$${primary_bastion_host_public_ip_name}"
+    #     zones = "$${starter_location_01_availability_zones}"
+    #   }
+    # }
 
     side_car_virtual_network = {
       name          = "$${primary_sidecar_virtual_network_name}"
       address_space = ["$${primary_side_car_virtual_network_address_space}"]
     }
   }
-  secondary = {
-    hub = {
-      name = "$${secondary_hub_name}"
+  # secondary = {
+  #   hub = {
+  #     name = "$${secondary_hub_name}"
 
-      resource_group = "$${connectivity_hub_secondary_resource_group_name}"
-      location       = "$${starter_location_02}"
-      address_prefix = "$${secondary_hub_address_space}"
-    }
-    firewall = {
-      name     = "$${secondary_firewall_name}"
-      sku_name = "AZFW_Hub"
-      sku_tier = "Standard"
-      zones    = "$${starter_location_02_availability_zones}"
-    }
-    firewall_policy = {
-      name = "$${secondary_firewall_policy_name}"
-    }
+  #     resource_group = "$${connectivity_hub_secondary_resource_group_name}"
+  #     location       = "$${starter_location_02}"
+  #     address_prefix = "$${secondary_hub_address_space}"
+  #   }
+  #   firewall = {
+  #     name     = "$${secondary_firewall_name}"
+  #     sku_name = "AZFW_Hub"
+  #     sku_tier = "Standard"
+  #     zones    = "$${starter_location_02_availability_zones}"
+  #   }
+  #   firewall_policy = {
+  #     name = "$${secondary_firewall_policy_name}"
+  #   }
 
-    virtual_network_gateways = {
-      express_route = {
-        name = "$${secondary_virtual_network_gateway_express_route_name}"
-      }
-      vpn = {
-        name = "$${secondary_virtual_network_gateway_vpn_name}"
-      }
-    }
+  #   virtual_network_gateways = {
+  #     express_route = {
+  #       name = "$${secondary_virtual_network_gateway_express_route_name}"
+  #     }
+  #     vpn = {
+  #       name = "$${secondary_virtual_network_gateway_vpn_name}"
+  #     }
+  #   }
 
-    private_dns_zones = {
-      resource_group_name            = "$${dns_resource_group_name}"
-      is_primary                     = false
-      auto_registration_zone_enabled = true
-      auto_registration_zone_name    = "$${secondary_auto_registration_zone_name}"
-      subnet_address_prefix          = "$${secondary_private_dns_resolver_subnet_address_prefix}"
-      private_dns_resolver = {
-        name = "$${secondary_private_dns_resolver_name}"
-      }
-    }
+  #   private_dns_zones = {
+  #     resource_group_name            = "$${dns_resource_group_name}"
+  #     is_primary                     = false
+  #     auto_registration_zone_enabled = true
+  #     auto_registration_zone_name    = "$${secondary_auto_registration_zone_name}"
+  #     subnet_address_prefix          = "$${secondary_private_dns_resolver_subnet_address_prefix}"
+  #     private_dns_resolver = {
+  #       name = "$${secondary_private_dns_resolver_name}"
+  #     }
+  #   }
 
-    bastion = {
-      subnet_address_prefix = "$${secondary_bastion_subnet_address_prefix}"
-      bastion_host = {
-        name = "$${secondary_bastion_host_name}"
-      }
-      bastion_public_ip = {
-        name  = "$${secondary_bastion_host_public_ip_name}"
-        zones = "$${starter_location_02_availability_zones}"
-      }
-    }
+  #   bastion = {
+  #     subnet_address_prefix = "$${secondary_bastion_subnet_address_prefix}"
+  #     bastion_host = {
+  #       name = "$${secondary_bastion_host_name}"
+  #     }
+  #     bastion_public_ip = {
+  #       name  = "$${secondary_bastion_host_public_ip_name}"
+  #       zones = "$${starter_location_02_availability_zones}"
+  #     }
+  #   }
 
-    side_car_virtual_network = {
-      name          = "$${secondary_sidecar_virtual_network_name}"
-      address_space = ["$${secondary_side_car_virtual_network_address_space}"]
-    }
-  }  
+  #   side_car_virtual_network = {
+  #     name          = "$${secondary_sidecar_virtual_network_name}"
+  #     address_space = ["$${secondary_side_car_virtual_network_address_space}"]
+  #   }
+  # }  
 }
-*/
