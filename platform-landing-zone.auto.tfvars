@@ -227,6 +227,9 @@ management_group_settings = {
             microsoftDefenderForEndpointWindowsArcAgentDeployEffect = "AuditIfNotExists"
             microsoftDefenderForEndpointLinuxArcAgentDeployEffect   = "AuditIfNotExists"
           }
+        },
+        Deploy-MDEndpointsAMA = {
+          enforcement_mode = "DoNotEnforce"
         }
       }
     }
