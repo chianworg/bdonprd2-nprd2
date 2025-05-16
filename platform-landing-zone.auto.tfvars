@@ -218,7 +218,7 @@ management_group_settings = {
           }
         },
         Deploy-AzActivity-Log = {
-          effect = "Disabled"
+          enforcement_mode = "DoNotEnforce"
         },
         Deploy-MDEndpoints = {
           parameters = {
