@@ -285,7 +285,7 @@ management_group_settings = {
     }
 
     # Example of how to update a policy assignment enforcement mode for DDOS Protection Plan
-    connectivity = {
+    mg-platform-connectivity-npd = {
       policy_assignments = {
         Enable-DDoS-VNET = {
           enforcement_mode = "DoNotEnforce"
@@ -293,7 +293,7 @@ management_group_settings = {
       }
     }
 
-    sandbox = {
+    mg-sandbox = {
       policy_assignments = {
         Enforce-ALZ-Sandbox = {
           enforcement_mode = "DoNotEnforce"
@@ -301,7 +301,7 @@ management_group_settings = {
       }
     }
 
-    decommissioned = {
+    mg-decom-npd = {
       policy_assignments = {
         Enforce-ALZ-Decomm = {
           enforcement_mode = "Default"
