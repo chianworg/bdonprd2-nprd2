@@ -304,7 +304,7 @@ management_group_settings = {
     decommissioned = {
       policy_assignments = {
         Enforce-ALZ-Decomm = {
-          enforcement_mode = "DoNotEnforce"
+          enforcement_mode = "Default"
         }
       }
     }
