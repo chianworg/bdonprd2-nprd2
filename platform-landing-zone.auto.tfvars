@@ -56,7 +56,7 @@ custom_replacements = {
     primary_hub_name                                   = "bdo6vwan-hub1-$${starter_location_01}"
     primary_sidecar_virtual_network_name               = "bdo6vnet-sidecar1-$${starter_location_01}"
     primary_firewall_name                              = "bdo6fw-hub1-$${starter_location_01}"
-    # primary_firewall_policy_name                       = "bdo6fwp-hub1-$${starter_location_01}"
+    primary_firewall_policy_name                       = "bdo6fwp-hub1-$${starter_location_01}"
     primary_virtual_network_gateway_express_route_name = "bdo6vgw-hub1-er-$${starter_location_01}"
     # primary_virtual_network_gateway_vpn_name           = "bdo6vgw-hub1-vpn-$${starter_location_01}"
     # primary_private_dns_resolver_name                  = "bdo6pdr-hub1-dns-$${starter_location_01}"
@@ -395,9 +395,9 @@ virtual_wan_virtual_hubs = {
       sku_tier = "Standard"
       zones    = "$${starter_location_01_availability_zones}"
     }
-    # firewall_policy = {
-    #   name = "$${primary_firewall_policy_name}"
-    # }
+    firewall_policy = {
+      name = "$${primary_firewall_policy_name}"
+    }
     virtual_network_gateways = {
       express_route = {
         name = "$${primary_virtual_network_gateway_express_route_name}"
