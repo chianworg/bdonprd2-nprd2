@@ -304,7 +304,7 @@ management_group_settings = {
     mg-decom-npd = {
       policy_assignments = {
         Enforce-ALZ-Decomm = {
-          enforcement_mode = "DoNotEnforce"
+          enforcement_mode = "Default"
         }
       }
     }
