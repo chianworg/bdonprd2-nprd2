@@ -239,9 +239,6 @@ management_group_settings = {
         },
         Enforce-ACSB = {
           enforcement_mode = "DoNotEnforce"
-        },
-        RE-01-Zonal-Residency = {
-          enforcement_mode = "DoNotEnforce"
         }
       }
     }
