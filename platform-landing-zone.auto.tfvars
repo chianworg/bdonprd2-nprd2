@@ -242,6 +242,15 @@ management_group_settings = {
         },
         RE-01-Zonal-Residency = {
           enforcement_mode = "DoNotEnforce"
+        },
+        SO-01-Data-Residency = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        SO-04-CMK = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        TR-01-Logging = {
+          enforcement_mode = "DoNotEnforce"
         }
       }
     }
