@@ -333,6 +333,69 @@ management_group_settings = {
         },
         Deploy-SQL-TDE = {
           enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-SQL-Threat = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Backup = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmArc-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmHybr-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-AUM-CheckUpdates = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-DDoS-VNET = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-AKS-HTTPS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-ASR = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-GR-KeyVault = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Subnet-Private = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-TLS-SSL-Q225 = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Audit-PeDnsZones = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-HybridNetworking = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Public-Endpoints = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Public-IP-On-NIC = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-Private-DNS-Zones = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Fsi-Conf = {
+          enforcement_mode = "DoNotEnforce"
         }
       }
     }
