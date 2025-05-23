@@ -221,15 +221,6 @@ management_group_settings = {
         Deploy-AzActivity-Log = {
           enforcement_mode = "DoNotEnforce"
         },
-        Deploy-MDEndpoints = {
-          parameters = {
-            microsoftDefenderForEndpointWindowsVmAgentDeployEffect  = "AuditIfNotExists"
-            microsoftDefenderForEndpointLinuxVmAgentDeployEffect    = "AuditIfNotExists"
-            microsoftDefenderForEndpointWindowsArcAgentDeployEffect = "AuditIfNotExists"
-            microsoftDefenderForEndpointLinuxArcAgentDeployEffect   = "AuditIfNotExists"
-          },
-          enforcement_mode = "DoNotEnforce"
-        },
         Deploy-MDEndpointsAMA = {
           enforcement_mode = "DoNotEnforce"
         },
@@ -269,12 +260,6 @@ management_group_settings = {
           enforcement_mode = "DoNotEnforce"
         },
         Deploy-VM-Monitoring = {
-          enforcement_mode = "DoNotEnforce"
-        },
-        Deploy-vmArc-ChangeTrack = {
-          enforcement_mode = "DoNotEnforce"
-        },
-        Deploy-vmHybr-Monitoring = {
           enforcement_mode = "DoNotEnforce"
         },
         Deploy-VMSS-ChangeTrack = {
@@ -346,12 +331,6 @@ management_group_settings = {
           enforcement_mode = "DoNotEnforce"
         },
         Deploy-VM-Monitoring = {
-          enforcement_mode = "DoNotEnforce"
-        },
-        Deploy-vmArc-ChangeTrack = {
-          enforcement_mode = "DoNotEnforce"
-        },
-        Deploy-vmHybr-Monitoring = {
           enforcement_mode = "DoNotEnforce"
         },
         Deploy-VMSS-ChangeTrack = {
@@ -443,12 +422,6 @@ management_group_settings = {
         Deploy-VM-Monitoring = {
           enforcement_mode = "DoNotEnforce"
         },
-        Deploy-vmArc-ChangeTrack = {
-          enforcement_mode = "DoNotEnforce"
-        },
-        Deploy-vmHybr-Monitoring = {
-          enforcement_mode = "DoNotEnforce"
-        },
         Deploy-VMSS-ChangeTrack = {
           enforcement_mode = "DoNotEnforce"
         },
@@ -538,12 +511,6 @@ management_group_settings = {
         Deploy-VM-Monitoring = {
           enforcement_mode = "DoNotEnforce"
         },
-        Deploy-vmArc-ChangeTrack = {
-          enforcement_mode = "DoNotEnforce"
-        },
-        Deploy-vmHybr-Monitoring = {
-          enforcement_mode = "DoNotEnforce"
-        },
         Deploy-VMSS-ChangeTrack = {
           enforcement_mode = "DoNotEnforce"
         },
@@ -631,12 +598,6 @@ management_group_settings = {
           enforcement_mode = "DoNotEnforce"
         },
         Deploy-VM-Monitoring = {
-          enforcement_mode = "DoNotEnforce"
-        },
-        Deploy-vmArc-ChangeTrack = {
-          enforcement_mode = "DoNotEnforce"
-        },
-        Deploy-vmHybr-Monitoring = {
           enforcement_mode = "DoNotEnforce"
         },
         Deploy-VMSS-ChangeTrack = {
