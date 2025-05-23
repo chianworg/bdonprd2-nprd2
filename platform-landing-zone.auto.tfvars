@@ -305,6 +305,38 @@ management_group_settings = {
       }
     }
 
+    mg-landingzones-dev = {
+      policy_assignments = {
+        Deny-IP-forwarding = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-MgmtPorts-Internet = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Priv-Esc-AKS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Privileged-AKS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Storage-http = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Subnet-Without-Nsg = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-AzSqlDb-Auditing = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-MDFC-DefSQL-AMA = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-SQL-TDE = {
+          enforcement_mode = "DoNotEnforce"
+        }
+      }
+    }
+
     mg-sandbox = {
       policy_assignments = {
         Enforce-ALZ-Sandbox = {
