@@ -215,7 +215,8 @@ management_group_settings = {
             enableAscForOssDb                           = "Disabled"
             enableAscForCosmosDbs                       = "Disabled"
             enableAscForCspm                            = "Disabled"
-          }
+          },
+          enforcement_mode = "DoNotEnforce"
         },
         Deploy-AzActivity-Log = {
           enforcement_mode = "DoNotEnforce"
@@ -226,7 +227,8 @@ management_group_settings = {
             microsoftDefenderForEndpointLinuxVmAgentDeployEffect    = "AuditIfNotExists"
             microsoftDefenderForEndpointWindowsArcAgentDeployEffect = "AuditIfNotExists"
             microsoftDefenderForEndpointLinuxArcAgentDeployEffect   = "AuditIfNotExists"
-          }
+          },
+          enforcement_mode = "DoNotEnforce"
         },
         Deploy-MDEndpointsAMA = {
           enforcement_mode = "DoNotEnforce"
@@ -306,6 +308,291 @@ management_group_settings = {
     }
 
     mg-landingzones-dev = {
+      policy_assignments = {
+        Deny-IP-forwarding = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-MgmtPorts-Internet = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Priv-Esc-AKS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Privileged-AKS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Storage-http = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Subnet-Without-Nsg = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-AzSqlDb-Auditing = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-MDFC-DefSQL-AMA = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-SQL-TDE = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-SQL-Threat = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Backup = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmArc-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmHybr-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-AUM-CheckUpdates = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-DDoS-VNET = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-AKS-HTTPS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-ASR = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-GR-KeyVault = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Subnet-Private = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-TLS-SSL-Q225 = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Audit-PeDnsZones = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-HybridNetworking = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Public-Endpoints = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Public-IP-On-NIC = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-Private-DNS-Zones = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Fsi-Conf = {
+          enforcement_mode = "DoNotEnforce"
+        }
+      }
+    }
+
+    mg-landingzones-ppd = {
+      policy_assignments = {
+        Deny-IP-forwarding = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-MgmtPorts-Internet = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Priv-Esc-AKS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Privileged-AKS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Storage-http = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Subnet-Without-Nsg = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-AzSqlDb-Auditing = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-MDFC-DefSQL-AMA = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-SQL-TDE = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-SQL-Threat = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Backup = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmArc-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmHybr-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-AUM-CheckUpdates = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-DDoS-VNET = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-AKS-HTTPS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-ASR = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-GR-KeyVault = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Subnet-Private = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-TLS-SSL-Q225 = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Audit-PeDnsZones = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-HybridNetworking = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Public-Endpoints = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Public-IP-On-NIC = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-Private-DNS-Zones = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Fsi-Conf = {
+          enforcement_mode = "DoNotEnforce"
+        }
+      }
+    }
+
+    mg-landingzones-sit = {
+      policy_assignments = {
+        Deny-IP-forwarding = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-MgmtPorts-Internet = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Priv-Esc-AKS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Privileged-AKS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Storage-http = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Subnet-Without-Nsg = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-AzSqlDb-Auditing = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-MDFC-DefSQL-AMA = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-SQL-TDE = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-SQL-Threat = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Backup = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VM-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmArc-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-vmHybr-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-ChangeTrack = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-VMSS-Monitoring = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-AUM-CheckUpdates = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enable-DDoS-VNET = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-AKS-HTTPS = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-ASR = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-GR-KeyVault = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Subnet-Private = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-TLS-SSL-Q225 = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Audit-PeDnsZones = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-HybridNetworking = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Public-Endpoints = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deny-Public-IP-On-NIC = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Deploy-Private-DNS-Zones = {
+          enforcement_mode = "DoNotEnforce"
+        },
+        Enforce-Fsi-Conf = {
+          enforcement_mode = "DoNotEnforce"
+        }
+      }
+    }
+
+    mg-landingzones-uat = {
       policy_assignments = {
         Deny-IP-forwarding = {
           enforcement_mode = "DoNotEnforce"

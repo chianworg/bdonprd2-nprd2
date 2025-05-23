@@ -26,7 +26,13 @@
       "Enforce-ASR",
       "Enforce-GR-KeyVault",
       "Enforce-Subnet-Private",
-      "Enforce-TLS-SSL-Q225"
+      "Enforce-TLS-SSL-Q225",
+      "Audit-PeDnsZones",
+      "Deny-HybridNetworking",
+      "Deny-Public-Endpoints",
+      "Deny-Public-IP-On-NIC",
+      "Deploy-Private-DNS-Zones",
+      "Enforce-Fsi-Conf"      
     ],
     "policy_definitions": [],
     "policy_set_definitions": [],
